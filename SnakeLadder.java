@@ -5,6 +5,7 @@ import java.util.Random;
 public class SnakeLadder {
     public static void main(String[] args) {
         int player1 = 0; // player1 position starts with 0
+        int dice = 0;
 
         Random rand = new Random();
 
@@ -12,6 +13,7 @@ public class SnakeLadder {
             int roll = rand.nextInt(6);      // initializing die with random function
             int dieRoll = roll + 1;
             int option = rand.nextInt(3);       // initializing option with random function
+            dice++;
 
             System.out.println("Player rolling the die.....");
             System.out.println("Got " + dieRoll);
@@ -35,7 +37,11 @@ public class SnakeLadder {
             if(player1 < 0) {
                 player1 = 0;
             }
+
+            System.out.println("Current position : " + player1);
         }
+
         System.out.println("Congratulations you reached " + player1 + " you Won the game.........");
+        System.out.println("Dice was rolled " + dice + " times");
     }
 }
